@@ -1,0 +1,62 @@
+# Windsurf Configuration Rules
+# Created: 2025-03-10
+
+# Test Framework Configuration
+test_framework:
+  language: python
+  style: functional
+  naming:
+    variables: snake_case
+    functions: snake_case
+    classes: PascalCase
+  
+  dependencies:
+    - playwright==1.42.0
+    - pytest==7.4.4
+    - pytest-playwright==0.4.3
+
+  structure:
+    directories:
+      - tests/e2e/        # End-to-end tests
+      - tests/components/ # Component tests
+      - page_objects/     # Page object models
+      - config/          # Test configurations
+      - utils/          # Helper utilities
+      - reports/        # Test execution reports
+
+  best_practices:
+    - Use type hints consistently
+    - Implement proper error handling
+    - Add descriptive docstrings
+    - Follow PEP8 style guide
+    - Use functional programming patterns
+    - Implement proper timeouts and waits
+    - Handle network state properly
+    - Use reliable selectors
+    - Add proper test documentation
+    - Handle internationalization
+
+  error_handling:
+    - Implement try-except blocks
+    - Provide descriptive error messages
+    - Handle timeouts gracefully
+    - Handle CAPTCHA detection
+    - Handle consent dialogs
+    - Verify network states
+
+  testing:
+    - Cross-browser testing
+    - Component-level tests
+    - Proper test isolation
+    - Descriptive test names
+    - Clear test documentation
+    - Proper fixture usage
+    - Handle rate limiting
+    - Add delays between tests
+
+  documentation:
+    - Maintain clear README.md
+    - Document test setup
+    - Document test execution
+    - Document known issues
+    - Add skip markers with reasons

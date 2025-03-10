@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "playwright_python_website"
+version = "0.1.0"
+description = "Website Testing Automation Framework"
+requires-python = ">=3.8"
+authors = [
+    { name = "Windsurf Project" }
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = [
+    "--headed",
+    "--browser", "chromium",
+    "--slowmo", "0",
+    "--video", "retain-on-failure",
+    "--screenshot", "only-on-failure",
+    "--html=reports/report.html"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]

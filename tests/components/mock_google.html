@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Google Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .search-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+        }
+        .search-results {
+            width: 100%;
+            max-width: 600px;
+        }
+        .result-item {
+            margin: 20px 0;
+            padding: 10px;
+            border-bottom: 1px solid #dfe1e5;
+        }
+        .result-title {
+            color: #1a0dab;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <form id="search-form">
+            <input type="text" name="q" class="search-input" placeholder="Search...">
+        </form>
+    </div>
+    <div id="search-results" class="search-results"></div>
+
+    <script>
+        const mockResults = {
+            'playwright python automation': [
+                {
+                    title: 'Playwright for Python | Playwright Python',
+                    url: 'https://playwright.dev/python/'
+                },
+                {
+                    title: 'Python Test Automation with Playwright',
+                    url: 'https://example.com/python-playwright'
+                },
+                {
+                    title: 'Getting Started with Playwright Automation',
+                    url: 'https://example.com/playwright-guide'
+                }
+            ],
+            'default': [
+                {
+                    title: 'No results found',
+                    url: '#'
+                }
+            ]
+        };
+
+        document.getElementById('search-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const query = e.target.q.value.toLowerCase();
+            const results = mockResults[query] || mockResults.default;
+            
+            const resultsContainer = document.getElementById('search-results');
+            resultsContainer.innerHTML = results.map(result => `
+                <div class="result-item">
+                    <h3 class="result-title">${result.title}</h3>
+                    <div class="result-url">${result.url}</div>
+                </div>
+            `).join('');
+        });
+    </script>
+</body>
+</html>

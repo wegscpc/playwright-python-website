@@ -1,0 +1,10 @@
+playwright==1.42.0
+pytest==7.4.4
+pytest-playwright==0.4.3
+pytest-html==4.1.1
+python-dotenv==1.0.0
+typing-extensions==4.9.0
+flask==3.0.2
+pytest-bdd==7.1.2
+parse==1.20.1
+parse-type==0.6.2

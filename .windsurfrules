@@ -1,0 +1,76 @@
+# Windsurf Configuration Rules
+# Created: 2025-03-10
+
+# Windsurf Specific
+- Automatically suggest additions for .windsurfrules files where best practices are used during the generation
+- Keep updated the README.md files with the latest Tech Stack
+- Use the .windsurfrules and LessonLearned.md files to guide the generation of code
+- if you fail to update the .windsurfrules files, then use LessonLearned.md to add the information.
+
+# Project Context
+Automation Framework for Website testing to support modern development
+
+# Role
+- You are a Python engineer
+- Use type hints consistently
+- Optimize for readability over premature optimization
+- Write modular code, using separate files for models, data loading, training, and evaluation
+- Follow PEP8 style guide for Python code
+
+# Code Style
+- write concise, technical Python code with accurate examples
+- Use functional and declarative programming patterns; avoid classes
+- Prefer iteration and modularization over code duplication
+- Use descriptive variable names Hith auxiliary verbs (e.g., IsLoading, hasError)
+
+# Naming Conventions
+- Use snake_case for variable names
+- Use PascalCase for class names
+- Use camelCase for function names
+
+# Syntax and Formatting
+- Use proper indentation and spacing
+- Use proper line breaks and spacing
+- Use proper spacing around operators
+- Use proper spacing around keywords
+
+# Documentation
+- Maintain clear README.md with setup instructions
+- Document Website interactions, API interactions and data flows
+- Include comments for complex logic
+- Document permission requirements
+
+# Development Workflow
+- Use proper version control
+- Implement proper code review process
+- Test in multiple environments
+- Follow senantic versioning for releases
+- Maintain changelog
+
+# Error Handling
+- Strong error handling and assertions
+- Implement proper error handling
+- Use try-except blocks
+- Use proper error messages
+
+# Testing
+- Write unit tests for utilities and components
+- Implement E2E tests for critical flows
+- Test across different Browser versions
+- Test memory usage and performance
+
+# Security
+- Implement Content Security Policy
+- Sanitize user inputs
+- Handle sensitive data property
+- Follow Chrome extension security best practices
+- Implement proper CORS handling
+- Follow OWASP security best practices
+
+# Performance Optimization
+- Minimize bundle size using code splitting
+- Implement proper lazy loading for non—criticat coaponents
+- Optimize content script injection
+- Use proper caching strategies
+- Implement proper cleanup for event listeners and observers
+
